@@ -1,6 +1,6 @@
 name := "sbt-scoverage"
 
-organization := "org.scoverage"
+organization := "eu.epitech.scoverage"
 
 enablePlugins(SbtPlugin)
 
@@ -10,7 +10,7 @@ resolvers ++= {
   if (isSnapshot.value) Seq(Resolver.sonatypeRepo("snapshots")) else Nil
 }
 
-libraryDependencies += "org.scoverage" %% "scalac-scoverage-plugin" % "1.4.0"
+libraryDependencies += "eu.epitech.scoverage" %% "scalac-scoverage-plugin" % "1.4.1.EPITEST"
 
 publishMavenStyle := true
 
@@ -40,9 +40,9 @@ releaseCrossBuild := false
 
 publishTo := {
   if (isSnapshot.value)
-    Some("snapshots" at "https://oss.sonatype.org/content/repositories/snapshots")
+    Some("snapshots" at "https://nexus.epitest.eu/repository/maven-snapshots")
   else
-    Some("releases" at "https://oss.sonatype.org/service/local/staging/deploy/maven2")
+    Some("releases" at "https://nexus.epitest.eu/repository/maven-releases")
 }
 
 pomExtra := {

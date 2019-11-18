@@ -7,11 +7,11 @@ import scoverage.report.{CoberturaXmlWriter, CoverageAggregator, ScoverageHtmlWr
 
 object ScoverageSbtPlugin extends AutoPlugin {
 
-  val OrgScoverage = "org.scoverage"
+  val OrgScoverage = "eu.epitech.scoverage"
   val ScalacRuntimeArtifact = "scalac-scoverage-runtime"
   val ScalacPluginArtifact = "scalac-scoverage-plugin"
   // this should match the version defined in build.sbt
-  val DefaultScoverageVersion = "1.4.0"
+  val DefaultScoverageVersion = "1.4.1.EPITEST"
   val autoImport = ScoverageKeys
   lazy val ScoveragePluginConfig = config("scoveragePlugin").hide
 
